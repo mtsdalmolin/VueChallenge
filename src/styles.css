@@ -11,7 +11,7 @@ INSTRUÇÔES DO DESAFIO
 */
 
 * {
- font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 div.header > div,
@@ -21,60 +21,60 @@ div.body > div {
 }
 
 input {
-	width: 100%;
+  width: 100%;
 }
 
 span {
-	width: 50%;
+  width: 50%;
 }
 
 input, button {
-	margin: 10px 20px;
-	font-size: 15px;
-	height: 25px;
-	border-radius: 5px;
-	border: 0;
-	text-align: center;
-	background-color: azure;
-	border: 1px solid lightblue;
-	color: #8E8E8E;
+  margin: 10px 20px;
+  font-size: 15px;
+  height: 25px;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  background-color: azure;
+  border: 1px solid lightblue;
+  color: #8E8E8E;
 }
 
 button#addBtn {
-	padding: 5px;
-	white-space: nowrap;
-	cursor: pointer;
+  padding: 5px;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 #parameters {
-	width: 100%;
+  width: 100%;
 }
 
 #parameters, #parameters div {
-	display: flex;
+  display: flex;
 }
 
 #parameters div:first-child {
-	width: 89%;
+  width: 89%;
 }
 
 #list-title {
-	width: 100%;
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
-	color: #8E8E8E;
+  width: 100%;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: #8E8E8E;
 }
 
 .header, .body {
-	border-radius: 5px;
+  border-radius: 5px;
 }
 
 .header span,
 .body span {
-	font-size: 20px;
-	padding: 5px;
-	border: 1px solid azure;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid azure;
 }
 
 .item:nth-child(odd) {
