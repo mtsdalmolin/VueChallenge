@@ -1,0 +1,90 @@
+/*
+####################
+INSTRUÇÔES DO DESAFIO
+#####################
+
+1. Transformar a lista em tabela;
+2. Adicionar uma coluna para que a quantidade do produto seja exibida também;
+3. Limpar a tabela  ao adicionar um novo produto, fazendo que a tabela não repita linhas; 
+4. Adicionar dois inputs de texto para que seja possível personalizar o nome e quantidade do novo produto;
+5. Refatorar as partes do código onde seja possível aplicar features do ES6 (let, const, map, arrow function);
+*/
+
+* {
+ font-family: sans-serif;
+}
+
+div.header > div,
+div.body > div {
+  display: flex;
+  width: 100%;
+}
+
+input {
+	width: 100%;
+}
+
+span {
+	width: 50%;
+}
+
+input, button {
+	margin: 10px 20px;
+	font-size: 15px;
+	height: 25px;
+	border-radius: 5px;
+	border: 0;
+	text-align: center;
+	background-color: azure;
+	border: 1px solid lightblue;
+	color: #8E8E8E;
+}
+
+button#addBtn {
+	padding: 5px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+#parameters {
+	width: 100%;
+}
+
+#parameters, #parameters div {
+	display: flex;
+}
+
+#parameters div:first-child {
+	width: 89%;
+}
+
+#list-title {
+	width: 100%;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	color: #8E8E8E;
+}
+
+.header, .body {
+	border-radius: 5px;
+}
+
+.header span,
+.body span {
+	font-size: 20px;
+	padding: 5px;
+	border: 1px solid azure;
+}
+
+.item:nth-child(odd) {
+  background-color: azure;
+} 
+
+.item:nth-child(even) {
+  background-color: white;
+}
+
+div.header {
+	background-color: lightblue;
+}
