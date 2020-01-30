@@ -9,15 +9,28 @@ var app = new Vue({
   },
   methods: {
     addItem: function () {
-      this.products.push({
-        name: this.productName,
-        quant: this.productQuant
+      let quantVal;
+      let notInArray = true;
+      this.products.map( product => {
+        if (product.name === this.productName) {
+          quantVal = parseInt(product.quant) + parseInt(this.productQuant);
+          product.quant = quantVal;
+          notInArray = !notInArray;
+        }
       });
+      if (notInArray)
+        this.products.push({
+          name: this.productName,
+          quant: this.productQuant
+        });
       this.clearInput();
     },
+    deleteItem: function (index) {
+      this.products.splice(this.products.indexOf(index, 1));
+    },
     clearInput: function () {
-    	this.productName = '';
-    	this.productQuant = '';
+      this.productName = '';
+      this.productQuant = '';
     }
   },
   template: `
@@ -28,7 +41,7 @@ var app = new Vue({
           <input type="number" id="itemQuant" placeholder="Quantity" v-model="productQuant">
         </div>
         <div>
-          <button id="addBtn" v-on:click="addItem">Add new product</button>
+          <button id="addBtn" @click="addItem">Add new product</button>
         </div>
       </div>
       <div id="list-title">
@@ -39,12 +52,16 @@ var app = new Vue({
           <div class="h-item">
             <span>Product</span>
             <span>Quantity</span>
+            <span class="action">Action</span>
           </div>
         </div>
         <div class="body">
-          <div class="item" v-for="product in products">
+          <div class="item" v-for="(product, index) in products">
             <span>{{ product.name }}</span>
             <span>{{ product.quant }}</span>
+            <div class="action">
+              <button @click="deleteItem(index)">Delete</button>
+            </div>
           </div>
         </div>
       </div>

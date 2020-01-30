@@ -25,7 +25,19 @@ input {
 }
 
 span {
-  width: 50%;
+  width: 46.5%;
+}
+
+div.action, 
+span.action {
+  width: 7%;
+  text-align: center;
+}
+
+div.action button {
+  background-color: lightgrey;
+  color: crimson;
+  cursor: pointer;
 }
 
 input, button {
@@ -86,5 +98,5 @@ button#addBtn {
 }
 
 div.header {
-	background-color: lightblue;
+  background-color: lightblue;
 }
